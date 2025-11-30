@@ -21,7 +21,7 @@ y_pred = df.predict(x_test)
 print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
 
 plt.figure(figsize=(15,8))
-plot_tree(clf, feature_names=feature_cols, class_names=['No Diabetes','Diabetes'], filled=True)
+plot_tree(df, feature_names=feature_cols, class_names=['No Diabetes','Diabetes'], filled=True)
 plt.show()
 
 new_sample = pd.DataFrame({
