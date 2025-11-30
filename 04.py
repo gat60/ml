@@ -13,10 +13,10 @@ y = plma['label']
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
 
-clf = DecisionTreeClassifier()
-clf = clf.fit(x_train, y_train)
+df = DecisionTreeClassifier()
+df = df.fit(x_train, y_train)
 
-y_pred = clf.predict(x_test)
+y_pred = df.predict(x_test)
 
 print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
 
@@ -34,7 +34,7 @@ new_sample = pd.DataFrame({
     'pedigree': [0.5]
 })
 
-prediction = clf.predict(new_sample)
+prediction = df.predict(new_sample)
 
 if prediction[0] == 1:
     print("The New Sample is predicted to have diabetes (label = 1)")
