@@ -20,11 +20,11 @@ data = pd.DataFrame({
 })
 print(data.head())
 
-df = RandomForestClassifier(n_estimators=100)
-df.fit(x_train, y_train)
+clf = RandomForestClassifier(n_estimators=100)
+clf.fit(x_train, y_train)
 
 y_pred = clf.predict(x_test)
 print("Accuracy of the model:", metrics.accuracy_score(y_test, y_pred))
 
-print(df.predict([[3, 3, 2, 2]]))
+print(clf.predict([[3, 3, 2, 2]]))
 print(iris.target_names[clf.predict([[3, 3, 2, 2]])])
